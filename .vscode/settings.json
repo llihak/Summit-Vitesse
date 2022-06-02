@@ -11,5 +11,17 @@
   "files.associations": {
     "*.css": "postcss"
   },
-  "editor.formatOnSave": false
+  "editor.formatOnSave": true,
+  "liveServer.settings.port": 5501,
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": true
+  },
+  "windicss.enableCodeFolding": true,
+  "windicss.enableEmmetCompletion": true,
+  "emmet.includeLanguages": {
+    "\"vue-html\"": "html",
+    "\"vue\"": "html"
+  }
 }

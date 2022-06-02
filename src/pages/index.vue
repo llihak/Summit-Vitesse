@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Overview from '../components/Overview.vue'
 const user = useUserStore()
 const name = $ref(user.savedName)
 
@@ -12,8 +13,22 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div>
-    <div text-4xl>
+  <main>
+    <summit>
+      <Overview />
+      <Sessions>
+        <Session />
+        <Session />
+        <Session />
+      </Sessions>
+    </summit>
+  </main>
+
+  <div class="hidden">
+    <div class="grid grid-cols-3">
+      <h1 class="bg-green-200 col-span-2">
+        Hey Hey, were the mongeese
+      </h1>
       <div i-carbon-campsite inline-block />
     </div>
     <p>
@@ -28,28 +43,14 @@ const { t } = useI18n()
     <div py-4 />
 
     <input
-      id="input"
-      v-model="name"
-      :placeholder="t('intro.whats-your-name')"
-      :aria-label="t('intro.whats-your-name')"
-      type="text"
-      autocomplete="false"
-      p="x4 y2"
-      w="250px"
-      text="center"
-      bg="transparent"
-      border="~ rounded gray-200 dark:gray-700"
-      outline="none active:none"
-      @keydown.enter="go"
+      id="input" v-model="name" :placeholder="t('intro.whats-your-name')" :aria-label="t('intro.whats-your-name')"
+      type="text" autocomplete="false" p="x4 y2" w="250px" text="center" bg="transparent"
+      border="~ rounded gray-200 dark:gray-700" outline="none active:none" @keydown.enter="go"
     >
     <label class="hidden" for="input">{{ t('intro.whats-your-name') }}</label>
 
     <div>
-      <button
-        btn m-3 text-sm
-        :disabled="!name"
-        @click="go"
-      >
+      <button btn m-3 text-sm :disabled="!name" @click="go">
         {{ t('button.go') }}
       </button>
     </div>
