@@ -17,9 +17,9 @@ const { t } = useI18n()
     <summit>
       <Overview />
       <Sessions>
-        <Session />
-        <Session />
-        <Session />
+        <Session title="Jeff is a big doo doo head" />
+        <Session title="I know what you did" />
+        <Session title="And why you did it" />
       </Sessions>
     </summit>
   </main>
