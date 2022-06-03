@@ -10,17 +10,27 @@ export default {
 </script>
 
 <template>
-  <div class="grid grid-cols-4 shadow-dark-800 mt-6">
-    <div class="media">
-      <img class="w-60" src="../assets/avatar-2092113_640.png" alt="">
+  <div class="
+      block sm:grid grid-cols-4 gap-4
+      mt-6
+      shadow-dark-800
+      ">
+    <div class="media flex justify-center mb-2 sm:mb-0">
+      <img class="w-[240px] h-[240px]" src="../assets/avatar-2092113_640.png" alt="">
     </div>
     <div class="session-details col-span-3">
       <div class="meta">
-        <h2>{{ name }}</h2>
-        <h3>{{ time }}</h3>
-        <h4>{{ title }}</h4>
+        <h2 class="font-bold text-2xl text-blue-700">
+          {{ name }}
+        </h2>
+        <h3 class="font-bold text-xl">
+          {{ time }}
+        </h3>
+        <h4 class="font-bold text-3xl text-orange-700">
+          {{ title }}
+        </h4>
       </div>
-      <div class="details col-span-3">
+      <div class="details col-span-3 mt-4">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Est perferendis itaque assumenda nemo iusto vero,
           illo

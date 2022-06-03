@@ -40,5 +40,15 @@
   "emmet.includeLanguages": {
     "\"vue-html\"": "html",
     "\"vue\"": "html"
+  },
+  "eslint.codeAction.showDocumentation": {},
+  "eslint.options": {
+  
+  },
+  {
+    "vue/first-attribute-linebreak": ["error", {
+      "singleline": "ignore",
+      "multiline": "below"
+    }]
   }
 }
