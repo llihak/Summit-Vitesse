@@ -7,7 +7,6 @@ export default {
 <template>
   <section>
     <div id="Summit">
-      <h1>Summit</h1>
       <slot />
     </div>
   </section>

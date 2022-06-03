@@ -5,8 +5,9 @@ export default {
 </script>
 
 <template>
-  <h3>All Sessions:</h3>
-  <slot />
+  <div class="Sessions mt-8">
+    <slot />
+  </div>
 </template>
 
 <style lang="">

@@ -1,5 +1,7 @@
+/* eslint-disable vue/html-closing-bracket-newline */
 <script setup lang="ts">
 import Overview from '../components/Overview.vue'
+import Hero1 from '~/components/Hero.vue'
 const user = useUserStore()
 const name = $ref(user.savedName)
 
@@ -13,13 +15,14 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <main>
+  <main class="container mx-auto">
     <summit>
+      <Hero />
       <Overview />
       <Sessions>
-        <Session title="Jeff is a big doo doo head" />
-        <Session title="I know what you did" />
-        <Session title="And why you did it" />
+        <Session title="Jeff is a big doo doo head" name="Jeff Gibby" time="9 AM" />
+        <Session title="I know what you did" name="Tom Piperson" time="10 AM" />
+        <Session title="And why you did it" name="John Bowfinger" time="11 AM" />
       </Sessions>
     </summit>
   </main>
@@ -42,11 +45,9 @@ const { t } = useI18n()
 
     <div py-4 />
 
-    <input
-      id="input" v-model="name" :placeholder="t('intro.whats-your-name')" :aria-label="t('intro.whats-your-name')"
+    <input id="input" v-model="name" :placeholder="t('intro.whats-your-name')" :aria-label="t('intro.whats-your-name')"
       type="text" autocomplete="false" p="x4 y2" w="250px" text="center" bg="transparent"
-      border="~ rounded gray-200 dark:gray-700" outline="none active:none" @keydown.enter="go"
-    >
+      border="~ rounded gray-200 dark:gray-700" outline="none active:none" @keydown.enter="go">
     <label class="hidden" for="input">{{ t('intro.whats-your-name') }}</label>
 
     <div>
