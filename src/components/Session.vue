@@ -1,10 +1,10 @@
 <script>
 export default {
   name: 'Session',
-  props: [
-    { name: String },
-    { title: String },
-  ],
+  props: {
+    name: String,
+    title: String,
+  },
 }
 </script>
 
