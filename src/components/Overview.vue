@@ -8,10 +8,7 @@ export default {
 </script>
 
 <template>
-  <div class="Overview
-           block sm:grid grid-cols-3
-           mt-8 p-4
-    ">
+  <div class="Overview            block sm:grid grid-cols-3           mt-8 p-4    ">
     <div class="blurb col-span-2">
       <p>
         Come to our summit Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quos, autem vel dolorem
